@@ -7,8 +7,7 @@
 - [Data-Engineering\_text-to-speech\_data-collection](#data-engineering_text-to-speech_data-collection)
   - [Introduction](#introduction)
   - [Overview](#overview)
-  - [Authors](#authors)
-  - [Show US your support](#show-us-your-support)
+
 
 
 ## Introduction
@@ -22,6 +21,5 @@
 
 👤 **
 
-## Show US your support
 
 Give US a ⭐ if you like this project!
