@@ -1,4 +1,6 @@
-### Create  a `getting_started.ini` fiile here and have the following code in the file
+> The code in this directory is a sample starter code from [Confluent](https://developer.confluent.io/get-started/python/#introduction) <br>
+Check it out for more detailed information
+#### Create  a `getting_started.ini` fiile here and have the following code in the file
 ```bash
 
 [default]
