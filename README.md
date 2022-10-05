@@ -63,44 +63,34 @@
 ```
 git clone https://github.com/TenAcademy/Data-Engineering_text-to-speech_data-collection.git
 cd Data-Engineering_text-to-speech_data-collection
+pip install -r requirements.txt
+run the application by using the
+python entry_point.py
 ```
 
 ## Examples
 
-> ### Using the dApp
+> ### Using the application
 
-- One can start using the dApp by first cloning the repo and going to the dApp directory as shown above or can direct interact with the hosted version by going [here](https://stirring-tarsier-1ebb66.netlify.app/)
-
-- If you choose the first option run the following command after navigating to the dApp directory to start the backend engine.
-
-```
-pip install -r requirements.txt
-python algorand_dApp_back_end.py
-```
+- One can start using the application by first running the . . . .
 
 - Navigate to the address provided on your local browser
-- Install the AlgoSigner wallet on your browser from [here](https://chrome.google.com/webstore/detail/algosigner/kmmolakhbgdlpkjkcjkebenjheonagdm)
 
-> #### Making transactions
+> #### Interacting with the front end
 
-- First navigate to the wallets tab.
+- First navigate to the . . . tab.
 
-- Start by selecting one of the provided Algorand networks as shown below.
+- Start by selecting one of the . . .
 
-  > ![](screenshots/select-network.png)
+  > ![](screenshots/image-II.png)
 
-- After selecting networks, addresses associated with that network will be found.
-
-- You can now easily make transactors by entering user and receiver addresses along with the amount of algos to send and some notes as shown below.
-
-  > ![](screenshots/make-transactions.png)
-
-- A pop up window will appear as shown below in order to grand access for the transaction. Grant the request and enter your AlgoSigner browser integration password.
-
-  > ![](screenshots/pop-up.png)
-
-- You can also easily check you balance as shown below.
-  > ![](screenshots/get-balance.png)
+> .
+>
+> .
+>
+> .
+>
+> .
 
 ## Pipelines
 
