@@ -31,7 +31,7 @@ producer.send('msgpack-topic', {'key': 'value'})
 # produce json messages
 # TODO: the line below was not commented
 # TODO: https://bobbyhadz.com/blog/python-typeerror-object-of-type-bytes-is-not-json-serializable#:~:text=The%20Python%20%22TypeError%3A%20Object%20of,string%20before%20serializing%20to%20JSON.
-#producer = KafkaProducer(value_serializer=lambda m: json.dumps(m).decode('utf-8').encode('utf-8'))
+producer = KafkaProducer(value_serializer=lambda m: json.dumps(m).decode('utf-8').encode('utf-8'))
 producer.send('json-topic', {'key': 'value'})
 
 # produce asynchronously
