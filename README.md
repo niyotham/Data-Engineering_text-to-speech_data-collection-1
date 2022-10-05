@@ -23,14 +23,14 @@
 ## Introduction
 
 > Data is everywhere. In order to get the best out of it one needs to extract it from several sources, make required transformations and load it to a data warehouse for further analysis and explorations. This is where ETL data pipelines come to use.
->
-> ETL stands for Extract, Transform and Load. An ETL tool extracts the data from different RDBMS source systems, real time user interactions and sever other sorts of transactions. Then the extracted data will be transformed using transformations which are almost always specific to the goal of the project like applying calculations, concatenate, analyze, and aggregate etc. And then load the data to Data Warehouse system. The data is loaded in the DW system in the form of dimension and fact tables, which can serve as the basis for which the bushiness analyzers, bushiness intelligence officers and machine learning teams can continue to work on with.
+
+> ETL stands for Extract, Transform and Load. An ETL tool extracts the data from different RDBMS source systems, real-time user interactions, and sever other sorts of transactions. Then the extracted data will be transformed using transformations that are almost always specific to the goal of the project like applying calculations, concatenating, analyzing, aggregating, etc. And then load the data to the data warehouse system. The data is loaded in the DW system in the form of dimension and fact tables, which can serve as the basis for which the business analyzers, bushiness intelligence officers, and machine learning teams can continue to work on with.
 
 ## Overview
 
-> Our client [10 Academy](https://www.10academy.org/), recognizing the value of large data sets for speech-t0-text data sets, and seeing the opportunity that there are many text corpuses for Amharic and Swahili languages, and understanding that complex data engineering skills is valuable to our profile for employers, wants to have a design and build a robust, large scale, fault tolerant, highly available Kafka cluster that can be used to post a sentence and receive an audio file.
+> Our client [10 Academy](https://www.10academy.org/), recognizing the value of large data sets for speech-t0-text data sets and seeing the opportunity that there are many text corpora for Amharic and Swahili languages, and understanding that complex data engineering skills are valuable to our profile for employers, want to have a design and build a robust, large scale, fault-tolerant, highly available Kafka cluster that can be used to post a sentence and receive an audio file.
 >
-> Producing a tool that can be deployed to process posting and receiving text and audio files from and into a data lake, apply transformation in a distributed manner, and load it into a warehouse in a suitable format to train a speech-t0-text model.
+> Producing a tool that can be deployed to process posting and receiving text and audio files from and into a Kafka topic, apply transformation in a distributed manner, and load it into a data warehouse in a suitable format to train a speech-to-text model would do the required job.
 
 ## Objective
 
