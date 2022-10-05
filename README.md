@@ -48,9 +48,15 @@
 >
 > Pip
 >
-> py-algorand-skd
+> kafka-python
 >
-> Flask
+> Zookeeper
+>
+> Apache airflow
+>
+> Apache kafka
+>
+> Apache Spark
 
 ## Install
 
