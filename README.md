@@ -1,37 +1,44 @@
-# Data engineering for a Text-to-speech conversion
+# KAFKA CLUSTERS
 
-### An ETL data pipeline to extract vocal data, transform and load it to a database for a text to speech conversion project to be used later on
+### An ETL data pipeline to to collect and extract vocal data, transform and load it to a data warehouse using Kafka clusters, Airflow, and spark for a text to speech conversion project
 
-![](screenshots/image-I.png)
+![](screenshots/image.png)
 
 ## Project details
 
-10 Academy Batch 6 - Weekly Challenge: Week 6 - Data Engineering: text-to-speech data collection with Kafka, Airflow, and Spark
-
 **Table of contents**
-
-Give US a ⭐ if you like this project!
 
 - [Introduction](#introduction)
 - [Overview](#overview)
 - [Objective](#objective)
 - [Requirements](#requirements)
 - [Install](#install)
-- [How to use the dApp](#examples)
-- [The pipeline application](#pipelines)
+- [How to use](#examples)
+- [End-to-end pipelines](#pipelines)
+- [Notebooks](#notebooks)
 - [Scripts](#scripts)
 - [Test](#test)
 - [Authors](#authors)
 
 ## Introduction
 
+> Data is everywhere. In order to get the best out of it one needs to extract it from several sources, make required transformations and load it to a data warehouse for further analysis and explorations. This is where ETL data pipelines come to use.
+>
+> ETL stands for Extract, Transform and Load. An ETL tool extracts the data from different RDBMS source systems, real time user interactions and sever other sorts of transactions. Then the extracted data will be transformed using transformations which are almost always specific to the goal of the project like applying calculations, concatenate, analyze, and aggregate etc. And then load the data to Data Warehouse system. The data is loaded in the DW system in the form of dimension and fact tables, which can serve as the basis for which the bushiness analyzers, bushiness intelligence officers and machine learning teams can continue to work on with.
+
 ## Overview
 
-> Web3 is the third generation of the web, or the commonly known and referred to communication network that we all love and call the internet. But Web3 is much more than the commonly known communication network and its uses. Web3 technology is inherently about the user controlled internet. It is being achieved by a growing stack of decentralized technologies, such as blockchains, smart contracts, oracles, crypto wallets, storage networks, and more.
+> Our client [10 Academy](https://www.10academy.org/), recognizing the value of large data sets for speech-t0-text data sets, and seeing the opportunity that there are many text corpuses for Amharic and Swahili languages, and understanding that complex data engineering skills is valuable to our profile for employers, wants to have a design and build a robust, large scale, fault tolerant, highly available Kafka cluster that can be used to post a sentence and receive an audio file.
+>
+> Producing a tool that can be deployed to process posting and receiving text and audio files from and into a data lake, apply transformation in a distributed manner, and load it into a warehouse in a suitable format to train a speech-t0-text model.
 
 ## Objective
 
-> In this project the main objective is to build an end-to-end Web3 decentralized application on the Algorand Blockchain that will help its client generate and distribute Non-Fungible Tokens (NFTs) as certificates that will represent the successful completion of a task or project to its customers, and allow its customers that are holding these NFTs to interact with a smart contract to perform pre-defined actions.
+> The objective of this week’s project is to build a data engineering pipeline that allows recording millions of Amharic and Swahili speakers reading digital texts in-app and web platforms
+>
+> This can be achieved by building an end-to-end ETL data pipeline that will use Apache Kafka, Apache Spark and Apache Airflow in order to receive user voice audio files, transform them and load them to a data warehouse that will latter be used for text-to-speech conversion machine learning project.
+>
+> Users will be prompt with several different sentences and they will provide their corresponding audio by recording using the front end user interface that is provided.
 
 ## Requirements
 
@@ -39,91 +46,60 @@ Give US a ⭐ if you like this project!
 >
 > Pip
 >
-> py-algorand-skd
+> kafka-python
 >
-> Flask
+> Zookeeper
+>
+> Apache airflow
+>
+> Apache kafka
+>
+> Apache Spark
 
 ## Install
 
-### Installing the Algorand Sandbox environment (Optional - for development use only)
+### Installing the Kafka cluster application
 
 ```
-git clone https://github.com/algorand/sandbox.git
-cd sandbox
-./sandbox up
-```
-
-- Detailed guidelines and instructions to develop with the Algorand sandbox could be found [here](https://github.com/algorand/sandbox)
-
-### Installing the decentralized application
-
-```
-git clone https://github.com/Fisseha-Estifanos/algorand_dApp.git
-cd algorand_dApp
+git clone https://github.com/TenAcademy/Data-Engineering_text-to-speech_data-collection.git
+cd Data-Engineering_text-to-speech_data-collection
 pip install -r requirements.txt
+python entry_point.py
 ```
 
 ## Examples
 
-> ### Using the dApp
+> ### Using the application
 
-- One can start using the dApp by first cloning the repo and going to the dApp directory as shown above or can direct interact with the hosted version by going [here](https://stirring-tarsier-1ebb66.netlify.app/)
+- One can start using the application by first running the . . . .
 
-- If you choose the first option run the following command after navigating to the dApp directory to start the backend engine.
+> ### Interacting with the front end
 
-```
-pip install -r requirements.txt
-python algorand_dApp_back_end.py
-```
+- First navigate to the . . . tab.
 
-- Navigate to the address provided on your local browser
-- Install the AlgoSigner wallet on your browser from [here](https://chrome.google.com/webstore/detail/algosigner/kmmolakhbgdlpkjkcjkebenjheonagdm)
+- Start by selecting one of the . . .
 
-> #### Making transactions
+  > ![](screenshots/image-II.png)
 
-- First navigate to the wallets tab.
-
-- Start by selecting one of the provided Algorand networks as shown below.
-
-  > ![](screenshots/select-network.png)
-
-- After selecting networks, addresses associated with that network will be found.
-
-- You can now easily make transactors by entering user and receiver addresses along with the amount of algos to send and some notes as shown below.
-
-  > ![](screenshots/make-transactions.png)
-
-- A pop up window will appear as shown below in order to grand access for the transaction. Grant the request and enter your AlgoSigner browser integration password.
-
-  > ![](screenshots/pop-up.png)
-
-- You can also easily check you balance as shown below.
-  > ![](screenshots/get-balance.png)
-
-> #### Creating NFT certificates
-
-> First navigate to the NFT certificates tab.
+> .
 >
-> You can now create NFT certificates by entering the following parameters listed below.
-
-- Asset name
-- Asset URL
-- Unit name
-- Total units
-- Decimals
-- Note
-
-* Note here that you first need to put your certificates in a distributed file management system, then input the address (url) of that certificate in the asset url input parameter.
-
-  > - ![](screenshots/create-nft.png)
+> .
+>
+> .
+>
+> .
 
 ## Pipelines
 
-> The decentralized application could be found here in the algorand_dApp folder.
+> The detailed use and implementation of the pipelines using Apache Airflow can be found in this pipelines folder.
+
+## Notebooks
+
+> All the notebooks that are used in this project including EDA, data cleaning and summarization are found here in the Notebooks folder.
 
 ## Scripts
 
-> All the scripts and modules for the creation of NFT certificates, transaction handling, smart contracts and any other helper scripts and modules along with default parameters and values used will be found here, in the scripts folder.
+> All the scripts and modules used for this project relating to interactions with the kafka, airflow, spark and data warehouse frameworks along with default parameters and values used will be found here, in the scripts folder.
 
 ## Tests
 
@@ -131,30 +107,27 @@ python algorand_dApp_back_end.py
 
 ## Authors
 
-> 👤 **Akubazgi Gebremariam**
->
-> - Email: [Akubazgi Gebremariam](email@gamil.com)
-> - GitHub: [Akubazgi Gebremariam](https://github.com/fisseha-estifanos)
-> - LinkedIn: [Akubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Akubazgi Gebremariam](https://twitter.com/f0x__tr0t)
-
 > 👤 **Birhanu Gebisa**
 >
-> - Email: [Birhanu Gebisa](email@gamil.com)
-> - GitHub: [Birhanu Gebisa](https://github.com/fisseha-estifanos)
+> - Email: [Birhanu Gebisa](birhanugebisa@gmail.com)
+> - GitHub: [Birhanu Gebisa](https://github.com/BirhanuGebisa)
 > - LinkedIn: [Birhanu Gebisa](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Birhanu Gebisa](https://twitter.com/f0x__tr0t)
+
+> 👤 **Ekubazgi Gebremariam**
+>
+> - Email: [Ekubazgi Gebremariam](axutec14@gmail.com)
+> - GitHub: [Ekubazgi Gebremariam](https://github.com/ekubay)
+> - LinkedIn: [Ekubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 
 > 👤 **Emtinan Salaheldin**
 >
-> - Email: [Emtinan Salaheldin](email@gamil.com)
-> - GitHub: [Emtinan Salaheldin](https://github.com/fisseha-estifanos)
+> - Email: [Emtinan Salaheldin](emtinan.s.e.osman@gmail.com)
+> - GitHub: [Emtinan Salaheldin](https://github.com/emtinanseo)
 > - LinkedIn: [Emtinan Salaheldin](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Emtinan Salaheldin](https://twitter.com/f0x__tr0t)
 
 > 👤 **Fisseha Estifanos**
 >
-> - Email: [Fisseha Estifanos](email@gamil.com)
+> - Email: [Fisseha Estifanos](fisseha.137@gamil.com)
 > - GitHub: [Fisseha Estifanos](https://github.com/fisseha-estifanos)
 > - LinkedIn: [Fisseha Estifanos](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 > - Twitter: [Fisseha Estifanos](https://twitter.com/f0x__tr0t)
@@ -163,15 +136,15 @@ python algorand_dApp_back_end.py
 
 > - Email: [Natnael Masresha](natnaelmasresha@gamil.com)
 > - GitHub: [Natnael Masresha](https://github.com/nathnael12)
+
 > - LinkedIn: [Natnael Masresha](https://www.linkedin.com/in/natnael-masresha-39a69b185/)
 > - Twitter: [Natnael Masresha](https://twitter.com/natnaelmasresha)
 
 > 👤 **Niyomukiza Thamar**
 >
-> - Email: [Niyomukiza Thamar](email@gamil.com)
-> - GitHub: [Niyomukiza Thamar](https://github.com/fisseha-estifanos)
+> - Email: [Niyomukiza Thamar](thamarniyo@gmail.com)
+> - GitHub: [Niyomukiza Thamar](https://github.com/niyotham)
 > - LinkedIn: [Niyomukiza Thamar](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Niyomukiza Thamar](https://twitter.com/f0x__tr0t)
 
 ## Show us your support
 
