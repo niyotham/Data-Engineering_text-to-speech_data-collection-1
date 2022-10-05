@@ -2,11 +2,11 @@
 
 ### An ETL data pipeline to extract vocal data, transform and load it to a database using Kafka clusters for a text to speech conversion project
 
+10 Academy Batch 6 - Weekly Challenge: Week 6 - Data Engineering: text-to-speech data collection with Kafka, Airflow, and Spark
+
 ![](screenshots/image-I.png)
 
 ## Project details
-
-10 Academy Batch 6 - Weekly Challenge: Week 6 - Data Engineering: text-to-speech data collection with Kafka, Airflow, and Spark
 
 **Table of contents**
 
