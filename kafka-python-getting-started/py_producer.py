@@ -1,10 +1,11 @@
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 import msgpack as pk
-import json
+# import json
+
 
 aws_instance_bootstrap_servers = ['b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092',
-                                  'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092'],
+                                  'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092']
 
 producer = KafkaProducer(bootstrap_servers=aws_instance_bootstrap_servers)
 
