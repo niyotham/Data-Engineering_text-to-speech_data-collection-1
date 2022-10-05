@@ -108,6 +108,8 @@ python algorand_dApp_back_end.py
 
 ## Notebooks
 
+> All the notebooks that are used in this project including EDA, data cleaning and summarization are found here in the Notebooks folder.
+
 ## Scripts
 
 > All the scripts and modules used for this project relating to interactions with the kafka, airflow, spark and data warehouse frameworks along with default parameters and values used will be found here, in the scripts folder.
