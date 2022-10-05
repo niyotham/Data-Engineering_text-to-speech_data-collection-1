@@ -112,45 +112,39 @@ python entry_point.py
 
 > 👤 **Akubazgi Gebremariam**
 >
-> - Email: [Akubazgi Gebremariam](email@gamil.com)
-> - GitHub: [Akubazgi Gebremariam](https://github.com/fisseha-estifanos)
+> - Email: [Akubazgi Gebremariam](axutec14@gmail.com)
+> - GitHub: [Akubazgi Gebremariam](https://github.com/ekubay)
 > - LinkedIn: [Akubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Akubazgi Gebremariam](https://twitter.com/f0x__tr0t)
 
 > 👤 **Birhanu Gebisa**
 >
-> - Email: [Birhanu Gebisa](email@gamil.com)
-> - GitHub: [Birhanu Gebisa](https://github.com/fisseha-estifanos)
+> - Email: [Birhanu Gebisa](birhanugebisa@gmail.com)
+> - GitHub: [Birhanu Gebisa](https://github.com/BirhanuGebisa)
 > - LinkedIn: [Birhanu Gebisa](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Birhanu Gebisa](https://twitter.com/f0x__tr0t)
 
 > 👤 **Emtinan Salaheldin**
 >
-> - Email: [Emtinan Salaheldin](email@gamil.com)
-> - GitHub: [Emtinan Salaheldin](https://github.com/fisseha-estifanos)
+> - Email: [Emtinan Salaheldin](emtinan.s.e.osman@gmail.com)
+> - GitHub: [Emtinan Salaheldin](https://github.com/emtinanseo)
 > - LinkedIn: [Emtinan Salaheldin](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Emtinan Salaheldin](https://twitter.com/f0x__tr0t)
 
 > 👤 **Fisseha Estifanos**
 >
-> - Email: [Fisseha Estifanos](email@gamil.com)
+> - Email: [Fisseha Estifanos](fisseha.137@gamil.com)
 > - GitHub: [Fisseha Estifanos](https://github.com/fisseha-estifanos)
 > - LinkedIn: [Fisseha Estifanos](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Fisseha Estifanos](https://twitter.com/f0x__tr0t)
 
 > 👤 **Natnael Masresha**
 
-> - Email: [Natnael Masresha](email@gamil.com)
-> - GitHub: [Natnael Masresha](https://github.com/fisseha-estifanos)
+> - Email: [Natnael Masresha](natnaelmasresha@gmail.com)
+> - GitHub: [Natnael Masresha](https://github.com/Nathnael12)
 > - LinkedIn: [Natnael Masresha](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Natnael Masresha](https://twitter.com/f0x__tr0t)
 
 > 👤 **Niyomukiza Thamar**
 >
-> - Email: [Niyomukiza Thamar](email@gamil.com)
-> - GitHub: [Niyomukiza Thamar](https://github.com/fisseha-estifanos)
+> - Email: [Niyomukiza Thamar](thamarniyo@gmail.com)
+> - GitHub: [Niyomukiza Thamar](https://github.com/niyotham)
 > - LinkedIn: [Niyomukiza Thamar](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Niyomukiza Thamar](https://twitter.com/f0x__tr0t)
 
 ## Show us your support
 
