@@ -1,10 +1,8 @@
 # KAFKA CLUSTERS
 
-### An ETL data pipeline to extract vocal data, transform and load it to a database using Kafka clusters for a text to speech conversion project
+### An ETL data pipeline to to collect and extract vocal data, transform and load it to a data warehouse using Kafka clusters, Airflow, and spark for a text to speech conversion project
 
-10 Academy Batch 6 - Weekly Challenge: Week 6 - Data Engineering: text-to-speech data collection with Kafka, Airflow, and Spark
-
-![](screenshots/image-I.png)
+![](screenshots/image.png)
 
 ## Project details
 
@@ -60,22 +58,11 @@
 
 ## Install
 
-### Installing the Algorand Sandbox environment (Optional - for development use only)
+### Installing the Kafka cluster application
 
 ```
-git clone https://github.com/algorand/sandbox.git
-cd sandbox
-./sandbox up
-```
-
-- Detailed guidelines and instructions to develop with the Algorand sandbox could be found [here](https://github.com/algorand/sandbox)
-
-### Installing the decentralized application
-
-```
-git clone https://github.com/Fisseha-Estifanos/algorand_dApp.git
-cd algorand_dApp
-pip install -r requirements.txt
+git clone https://github.com/TenAcademy/Data-Engineering_text-to-speech_data-collection.git
+cd Data-Engineering_text-to-speech_data-collection
 ```
 
 ## Examples
@@ -115,32 +102,15 @@ python algorand_dApp_back_end.py
 - You can also easily check you balance as shown below.
   > ![](screenshots/get-balance.png)
 
-> #### Creating NFT certificates
-
-> First navigate to the NFT certificates tab.
->
-> You can now create NFT certificates by entering the following parameters listed below.
-
-- Asset name
-- Asset URL
-- Unit name
-- Total units
-- Decimals
-- Note
-
-* Note here that you first need to put your certificates in a distributed file management system, then input the address (url) of that certificate in the asset url input parameter.
-
-  > - ![](screenshots/create-nft.png)
-
 ## Pipelines
 
-> The decentralized application could be found here in the algorand_dApp folder.
+> The detailed use and implementation of the pipelines using Apache Airflow can be found in this pipelines folder.
 
 ## Notebooks
 
 ## Scripts
 
-> All the scripts and modules for the creation of NFT certificates, transaction handling, smart contracts and any other helper scripts and modules along with default parameters and values used will be found here, in the scripts folder.
+> All the scripts and modules used for this project relating to interactions with the kafka, airflow, spark and data warehouse frameworks along with default parameters and values used will be found here, in the scripts folder.
 
 ## Tests
 
