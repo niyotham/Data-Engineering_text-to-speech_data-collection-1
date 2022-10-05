@@ -113,11 +113,11 @@ python entry_point.py
 > - GitHub: [Birhanu Gebisa](https://github.com/BirhanuGebisa)
 > - LinkedIn: [Birhanu Gebisa](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 
-> 👤 **Akubazgi Gebremariam**
+> 👤 **Ekubazgi Gebremariam**
 >
-> - Email: [Akubazgi Gebremariam](axutec14@gmail.com)
-> - GitHub: [Akubazgi Gebremariam](https://github.com/ekubay)
-> - LinkedIn: [Akubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
+> - Email: [Ekubazgi Gebremariam](axutec14@gmail.com)
+> - GitHub: [Ekubazgi Gebremariam](https://github.com/ekubay)
+> - LinkedIn: [Ekubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 
 > 👤 **Emtinan Salaheldin**
 >
