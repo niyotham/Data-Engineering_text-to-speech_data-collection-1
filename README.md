@@ -109,39 +109,39 @@ python entry_point.py
 
 > 👤 **Birhanu Gebisa**
 >
-> - [Email](birhanugebisa@gmail.com)
+> - [Email](mailto:birhanugebisa@gmail.com)
 > - [GitHub](https://github.com/BirhanuGebisa)
 > - [LinkedIn](https://www.linkedin.com/in/birhanu-gebisa2721/)
 
 > 👤 **Ekubazgi Gebremariam**
 >
-> - [Email](axutec14@gmail.com)
+> - [Email](mailto:axutec14@gmail.com)
 > - [GitHub](https://github.com/ekubay)
 > - [LinkedIn](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 
 > 👤 **Emtinan Salaheldin**
 >
-> - [Email](emtinan.s.e.osman@gmail.com)
+> - [Email](mailto:emtinan.s.e.osman@gmail.com)
 > - [GitHub](https://github.com/emtinanseo)
 > - [LinkedIn](https://www.linkedin.com/in/emtinan-elkhidir-osman-646242119/)
 
 > 👤 **Fisseha Estifanos**
 >
-> - [Email](fisseha.137@gamil.com)
+> - [Email](mailto:fisseha.137@gamil.com)
 > - [GitHub](https://github.com/fisseha-estifanos)
 > - [LinkedIn](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 > - [Twitter](https://twitter.com/f0x__tr0t)
 
 > 👤 **Natnael Masresha**
 
-> - [Email](natnaelmasresha@gmail.com)
+> - [Email](mailto:natnaelmasresha@gmail.com)
 > - [GitHub](https://github.com/Nathnael12)
 > - [LinkedIn](https://www.linkedin.com/in/natnael-masresha-39a69b185/)
 > - [Twitter](https://twitter.com/natnaelmasresha)
 
 > 👤 **Niyomukiza Thamar**
 >
-> - [Email](thamarniyo@gmail.com)
+> - [Email](mailto:thamarniyo@gmail.com)
 > - [GitHub](https://github.com/niyotham)
 > - [LinkedIn](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 
