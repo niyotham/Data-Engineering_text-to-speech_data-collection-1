@@ -64,7 +64,6 @@
 git clone https://github.com/TenAcademy/Data-Engineering_text-to-speech_data-collection.git
 cd Data-Engineering_text-to-speech_data-collection
 pip install -r requirements.txt
-run the application by using the
 python entry_point.py
 ```
 
@@ -73,8 +72,6 @@ python entry_point.py
 > ### Using the application
 
 - One can start using the application by first running the . . . .
-
-- Navigate to the address provided on your local browser
 
 > #### Interacting with the front end
 
@@ -133,6 +130,7 @@ python entry_point.py
 > - Email: [Fisseha Estifanos](fisseha.137@gamil.com)
 > - GitHub: [Fisseha Estifanos](https://github.com/fisseha-estifanos)
 > - LinkedIn: [Fisseha Estifanos](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
+> - Twitter: [Fisseha Estifanos](https://twitter.com/f0x__tr0t)
 
 > 👤 **Natnael Masresha**
 
