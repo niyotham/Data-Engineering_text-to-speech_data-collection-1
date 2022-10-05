@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-import sys
 from random import choice
 from argparse import ArgumentParser, FileType
 from configparser import ConfigParser
@@ -33,7 +30,8 @@ if __name__ == '__main__':
 
     # Produce data by selecting random values from these lists.
     topic = "text_speech"
-    user_ids = ['eabara', 'jsmith', 'sgarcia', 'jbernard', 'htanaka', 'awalther']
+    user_ids = ['eabara', 'jsmith', 'sgarcia',
+                'jbernard', 'htanaka', 'awalther']
     products = ['book', 'alarm clock', 't-shirts', 'gift card', 'batteries']
 
     count = 0
