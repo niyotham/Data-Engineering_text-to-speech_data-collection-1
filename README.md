@@ -10,8 +10,6 @@
 
 **Table of contents**
 
-Give US a ⭐ if you like this project!
-
 - [Introduction](#introduction)
 - [Overview](#overview)
 - [Objective](#objective)
@@ -25,13 +23,19 @@ Give US a ⭐ if you like this project!
 
 ## Introduction
 
+> Data is everywhere. In order to get the best out of it one needs to extract it from several sources, make required transformations and load it to a data warehouse for further analysis and explorations. This is where ETL data pipelines come to use.
+>
+> ETL stands for Extract, Transform and Load. An ETL tool extracts the data from different RDBMS source systems, real time user interactions and sever other sorts of transactions. Then the extracted data will be transformed using transformations which are almost always specific to the goal of the project like applying calculations, concatenate, analyze, and aggregate etc. And then load the data to Data Warehouse system. The data is loaded in the DW system in the form of dimension and fact tables, which can serve as the basis for which the bushiness analyzers, bushiness intelligence officers and machine learning teams can continue to work on with.
+
 ## Overview
 
 > Web3 is the third generation of the web, or the commonly known and referred to communication network that we all love and call the internet. But Web3 is much more than the commonly known communication network and its uses. Web3 technology is inherently about the user controlled internet. It is being achieved by a growing stack of decentralized technologies, such as blockchains, smart contracts, oracles, crypto wallets, storage networks, and more.
 
 ## Objective
 
-> In this project the main objective is to build an end-to-end Web3 decentralized application on the Algorand Blockchain that will help its client generate and distribute Non-Fungible Tokens (NFTs) as certificates that will represent the successful completion of a task or project to its customers, and allow its customers that are holding these NFTs to interact with a smart contract to perform pre-defined actions.
+> In this project the main objective is to build an end-to-end ETL data pipeline that will use Apache Kafka, Apache Spark and Apache Airflow in order to receive user voice audio files, transform them and load them to a data warehouse that will latter be used for text-to-speech conversion machine learning project.
+>
+> Users will be prompt with several different sentences and they will provide their corresponding audio by recording using the front end user interface that is provided.
 
 ## Requirements
 
