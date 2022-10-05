@@ -1,5 +1,4 @@
 outs:
-- md5: 0341b4a7198c849c9f4e3bc427d86da8
-  size: 191677729
-  isexec: true
+- md5: 3722fb060e579ea644576a067c7be85d
+  size: 186412811
   path: Amharic News Dataset.csv
