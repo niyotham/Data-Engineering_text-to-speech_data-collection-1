@@ -111,7 +111,7 @@ python entry_point.py
 >
 > - [Email](birhanugebisa@gmail.com)
 > - [GitHub](https://github.com/BirhanuGebisa)
-> - [LinkedIn](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
+> - [LinkedIn](https://www.linkedin.com/in/birhanu-gebisa2721/)
 
 > 👤 **Ekubazgi Gebremariam**
 >
@@ -123,7 +123,7 @@ python entry_point.py
 >
 > - [Email](emtinan.s.e.osman@gmail.com)
 > - [GitHub](https://github.com/emtinanseo)
-> - [LinkedIn](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
+> - [LinkedIn](https://www.linkedin.com/in/emtinan-elkhidir-osman-646242119/)
 
 > 👤 **Fisseha Estifanos**
 >
