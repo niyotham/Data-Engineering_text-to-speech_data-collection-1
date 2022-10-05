@@ -1,6 +1,6 @@
-# Data engineering for a Text-to-speech conversion
+# KAFKA CLUSTERS
 
-### An ETL data pipeline to extract vocal data, transform and load it to a database for a text to speech conversion project to be used later on
+### An ETL data pipeline to extract vocal data, transform and load it to a database using Kafka clusters for a text to speech conversion project
 
 ![](screenshots/image-I.png)
 
@@ -15,8 +15,9 @@
 - [Objective](#objective)
 - [Requirements](#requirements)
 - [Install](#install)
-- [How to use the dApp](#examples)
-- [The pipeline application](#pipelines)
+- [How to use the](#examples)
+- [End-to-end pipelines](#pipelines)
+- [Notebooks](#notebooks)
 - [Scripts](#scripts)
 - [Test](#test)
 - [Authors](#authors)
@@ -29,7 +30,9 @@
 
 ## Overview
 
-> Web3 is the third generation of the web, or the commonly known and referred to communication network that we all love and call the internet. But Web3 is much more than the commonly known communication network and its uses. Web3 technology is inherently about the user controlled internet. It is being achieved by a growing stack of decentralized technologies, such as blockchains, smart contracts, oracles, crypto wallets, storage networks, and more.
+> Our client [10 Academy](https://www.10academy.org/), recognizing the value of large data sets for speech-t0-text data sets, and seeing the opportunity that there are many text corpuses for Amharic and Swahili languages, and understanding that complex data engineering skills is valuable to our profile for employers, wants to have a design and build a robust, large scale, fault tolerant, highly available Kafka cluster that can be used to post a sentence and receive an audio file.
+>
+> Producing a tool that can be deployed to process posting and receiving text and audio files from and into a data lake, apply transformation in a distributed manner, and load it into a warehouse in a suitable format to train a speech-t0-text model.
 
 ## Objective
 
@@ -124,6 +127,8 @@ python algorand_dApp_back_end.py
 ## Pipelines
 
 > The decentralized application could be found here in the algorand_dApp folder.
+
+## Notebooks
 
 ## Scripts
 
