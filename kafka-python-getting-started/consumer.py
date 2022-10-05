@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import sys
 from argparse import ArgumentParser, FileType
 from configparser import ConfigParser
 from confluent_kafka import Consumer, OFFSET_BEGINNING
@@ -43,7 +42,7 @@ if __name__ == '__main__':
                 # rebalance and start consuming
                 print("Waiting...")
             elif msg.error():
-                print("ERROR: %s".format(msg.error()))
+                print(f"ERROR: {format(msg.error())}")
             else:
                 # Extract the (optional) key and value, and print.
 
