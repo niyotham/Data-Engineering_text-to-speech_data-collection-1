@@ -13,7 +13,7 @@
 - [Objective](#objective)
 - [Requirements](#requirements)
 - [Install](#install)
-- [How to use the](#examples)
+- [How to use](#examples)
 - [End-to-end pipelines](#pipelines)
 - [Notebooks](#notebooks)
 - [Scripts](#scripts)
@@ -73,7 +73,7 @@ python entry_point.py
 
 - One can start using the application by first running the . . . .
 
-> #### Interacting with the front end
+> ### Interacting with the front end
 
 - First navigate to the . . . tab.
 
