@@ -36,7 +36,9 @@
 
 ## Objective
 
-> In this project the main objective is to build an end-to-end ETL data pipeline that will use Apache Kafka, Apache Spark and Apache Airflow in order to receive user voice audio files, transform them and load them to a data warehouse that will latter be used for text-to-speech conversion machine learning project.
+> The objective of this week’s project is to build a data engineering pipeline that allows recording millions of Amharic and Swahili speakers reading digital texts in-app and web platforms
+>
+> This can be achieved by building an end-to-end ETL data pipeline that will use Apache Kafka, Apache Spark and Apache Airflow in order to receive user voice audio files, transform them and load them to a data warehouse that will latter be used for text-to-speech conversion machine learning project.
 >
 > Users will be prompt with several different sentences and they will provide their corresponding audio by recording using the front end user interface that is provided.
 
