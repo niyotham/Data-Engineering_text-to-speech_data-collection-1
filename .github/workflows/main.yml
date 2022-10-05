@@ -1,0 +1,23 @@
+name: ETL-pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # NodeJS & Python3 
+     
+      - name: Train model
+        run: |
+          # Text-to-speech ETL workflow goes here
+          sudo pip install -r requirements.txt
+      - name: CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Post reports as comments in GitHub PRs
+          cat results.txt >> report.md
+          cml send-comment report.md
