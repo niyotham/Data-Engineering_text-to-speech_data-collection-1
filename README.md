@@ -134,8 +134,9 @@ python entry_point.py
 
 > 👤 **Natnael Masresha**
 
-> - Email: [Natnael Masresha](natnaelmasresha@gmail.com)
-> - GitHub: [Natnael Masresha](https://github.com/Nathnael12)
+> - Email: [Natnael Masresha](natnaelmasresha@gamil.com)
+> - GitHub: [Natnael Masresha](https://github.com/nathnael12)
+
 > - LinkedIn: [Natnael Masresha](https://www.linkedin.com/in/natnael-masresha-39a69b185/)
 > - Twitter: [Natnael Masresha](https://twitter.com/natnaelmasresha)
 
