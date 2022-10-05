@@ -107,17 +107,17 @@ python entry_point.py
 
 ## Authors
 
-> 👤 **Akubazgi Gebremariam**
->
-> - Email: [Akubazgi Gebremariam](axutec14@gmail.com)
-> - GitHub: [Akubazgi Gebremariam](https://github.com/ekubay)
-> - LinkedIn: [Akubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-
 > 👤 **Birhanu Gebisa**
 >
 > - Email: [Birhanu Gebisa](birhanugebisa@gmail.com)
 > - GitHub: [Birhanu Gebisa](https://github.com/BirhanuGebisa)
 > - LinkedIn: [Birhanu Gebisa](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
+
+> 👤 **Akubazgi Gebremariam**
+>
+> - Email: [Akubazgi Gebremariam](axutec14@gmail.com)
+> - GitHub: [Akubazgi Gebremariam](https://github.com/ekubay)
+> - LinkedIn: [Akubazgi Gebremariam](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
 
 > 👤 **Emtinan Salaheldin**
 >
