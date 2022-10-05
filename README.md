@@ -161,10 +161,10 @@ python algorand_dApp_back_end.py
 
 > 👤 **Natnael Masresha**
 
-> - Email: [Natnael Masresha](email@gamil.com)
-> - GitHub: [Natnael Masresha](https://github.com/fisseha-estifanos)
-> - LinkedIn: [Natnael Masresha](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
-> - Twitter: [Natnael Masresha](https://twitter.com/f0x__tr0t)
+> - Email: [Natnael Masresha](natnaelmasresha@gamil.com)
+> - GitHub: [Natnael Masresha](https://github.com/nathnael12)
+> - LinkedIn: [Natnael Masresha](https://www.linkedin.com/in/natnael-masresha-39a69b185/)
+> - Twitter: [Natnael Masresha](https://twitter.com/natnaelmasresha)
 
 > 👤 **Niyomukiza Thamar**
 >
