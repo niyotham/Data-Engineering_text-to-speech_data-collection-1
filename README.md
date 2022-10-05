@@ -111,7 +111,7 @@ python entry_point.py
 >
 > - Email: [Birhanu Gebisa](birhanugebisa@gmail.com)
 > - GitHub: [Birhanu Gebisa](https://github.com/BirhanuGebisa)
-> - LinkedIn: [Birhanu Gebisa](https://www.linkedin.com/in/fisseha-estifanos-109ba6199/)
+> - LinkedIn: [Birhanu Gebisa](https://www.linkedin.com/in/birhanu-gebisa2721/)
 
 > 👤 **Ekubazgi Gebremariam**
 >
