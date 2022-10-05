@@ -176,3 +176,5 @@ python algorand_dApp_back_end.py
 ## Show us your support
 
 > Give us a ⭐ if you like this project, and also feel free to contact us at any moment.
+
+![Contributors list](https://contrib.rocks/image?repo=TenAcademy/Data-Engineering_text-to-speech_data-collection)
