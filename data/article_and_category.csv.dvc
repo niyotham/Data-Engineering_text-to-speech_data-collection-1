@@ -1,0 +1,4 @@
+outs:
+- md5: 1e5075240ee46519326d8567f70bb155
+  size: 173849317
+  path: article_and_category.csv
