@@ -52,6 +52,24 @@ trigger_pipeline = PythonOperator(
 # endregion
 
 
+# region read raw data
+
+def read_raw_data():
+    print('reading raw data . . .')
+    raw_data = pd.read_csv('../data/raw_data.csv')
+    print(raw_data.shape)
+    print('reading raw data completed . . .')
+
+
+raw_data_read = PythonOperator(
+    task_id='raw_data_read',
+    python_callable=read_raw_data,
+    dag=etl_dag
+)
+
+# endregion
+
+
 # region produce message
 
 def produce_the_message():
@@ -126,4 +144,4 @@ load_message_to_DWH = PythonOperator(
 
 # endregion
 
-trigger_pipeline >> produce_message >> consume_message >> transform_message >> add_metadata >> load_message_to_DWH
+trigger_pipeline >> raw_data_read >> produce_message >> consume_message >> transform_message >> add_metadata >> load_message_to_DWH
