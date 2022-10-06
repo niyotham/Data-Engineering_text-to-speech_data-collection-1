@@ -40,7 +40,7 @@ etl_dag = DAG(
 # region trigger task
 
 def receive_trigger():
-    print('trigger received')
+    print('trigger received . . .')
 
 
 trigger_pipeline = PythonOperator(
