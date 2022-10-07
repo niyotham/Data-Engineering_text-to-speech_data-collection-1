@@ -27,11 +27,10 @@ default_args = {
 
 # define the DAG
 etl_dag = DAG(
-    'KAFKA_CLUSTERS_data_pipeline',
+    'KAFKA_CLUSTERS',
     default_args=default_args,
     start_date=datetime(2022, 10, 1),
-    description='An end to end data pipeline for week 7 of 10 '
-    + 'academy project',
+    description='An end to end data pipeline for week 7 of 10 academy project',
     schedule=timedelta(days=1),     # run every day
     catchup=False                   # dont perform a backfill of missing runs
 )
@@ -56,7 +55,10 @@ trigger_pipeline = PythonOperator(
 
 def read_raw_data():
     print('reading raw data . . .')
-    raw_data = pd.read_csv('../airflow/data/raw_data.csv')
+    print(f'now in {os.getcwd()}')
+    raw_data = pd.read_csv(
+        '~/../fisseha_estifanos/Data-Engineering_text-to-speech_data-collection/data/raw_data.csv')
+    # raw_data = pd.read_csv('~/raw_data.csv')
     print(raw_data.shape)
     print('reading raw data completed . . .')
 
