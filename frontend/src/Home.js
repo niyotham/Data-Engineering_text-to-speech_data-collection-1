@@ -13,15 +13,15 @@ const Home = () => {
             s: 0
         }
     });
-    const [text, setText] = useState({"text":""})
-    const getText= async () => {
+    const [text, setText] = useState({ "text": "" })
+    const getText = async () => {
         let response = await axios.get("http://127.0.0.1:8000/loadText");
         let data = response.data;
-        let textData={
-            "text":data["0"],
-            "id":data["1"]
+        let textData = {
+            "text": data["0"],
+            "id": data["1"]
         }
-        setText({...textData})
+        setText({ ...textData })
     }
 
 
@@ -32,19 +32,19 @@ const Home = () => {
 
     const handleAudioUpload = async (file) => {
 
-        let base64data = null;
-
-        let reader = new FileReader();
+        let base64data;
+        var reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onloadend = function () {
+        reader.onloadend = async function () {
             base64data = reader.result;
-            // console.log(base64data);
+            console.log(base64data);
+
+            let data = {
+                "id": { ...text }.id,
+                "base64": base64data
+            }
+            await axios.post(`http://127.0.0.1:8000/send`, data)
         }
-        let data = {
-            "id":{...text}.id,
-            "base64":base64data,
-        }
-        await axios.post(`http://127.0.0.1:8000/send`, data)
         window.alert("Uploaded!")
     };
 
@@ -63,31 +63,31 @@ const Home = () => {
 
     return (
         <div className="App">
-            <div style={{"width":"90vw","marginInline":"auto","padding":"5px","textAlign":"left"}}>
+            <div style={{ "width": "90vw", "marginInline": "auto", "padding": "5px", "textAlign": "left" }}>
                 <h1>Text-to-Speech Data Collection System</h1>
             </div>
-            <div style={{"width":"90vw","border":"1px solid black","borderRadius":"10px","marginInline":"auto","padding":"5px","height":"25px","textAlign":"left","marginBlock":"10px","verticalAlign":"center"}}>
-            {{...text}.text}
+            <div style={{ "width": "90vw", "border": "1px solid black", "borderRadius": "10px", "marginInline": "auto", "padding": "5px", "height": "25px", "textAlign": "left", "marginBlock": "10px", "verticalAlign": "center" }}>
+                {{ ...text }.text}
             </div>
-            <div style={{"width":"90vw","marginInline":"auto","padding":"5px","textAlign":"left"}}>
-            <button onClick={getText}
-            style={{"padding":"10px"}}
-            >
-                Get Text
-            </button>
+            <div style={{ "width": "90vw", "marginInline": "auto", "padding": "5px", "textAlign": "left" }}>
+                <button onClick={getText}
+                    style={{ "padding": "10px" }}
+                >
+                    Get Text
+                </button>
             </div>
-            <div style={{"width":"90vw","marginInline":"auto","padding":"5px","textAlign":"left"}}>
-            <Recorder
-                record={true}
-                // title={"Text to Speech Recording"}
-                audioURL={audioDetails.url}
-                showUIAudio
-                handleAudioStop={handleAudioStop}
-                handleAudioUpload={handleAudioUpload}
-                // handleCountDown={handleCountDown}
-                handleReset={handleReset}
-            // mimeTypeToUseWhenRecording={`audio/webm`}
-            />
+            <div style={{ "width": "90vw", "marginInline": "auto", "padding": "5px", "textAlign": "left" }}>
+                <Recorder
+                    record={true}
+                    // title={"Text to Speech Recording"}
+                    audioURL={audioDetails.url}
+                    showUIAudio
+                    handleAudioStop={handleAudioStop}
+                    handleAudioUpload={handleAudioUpload}
+                    // handleCountDown={handleCountDown}
+                    handleReset={handleReset}
+                // mimeTypeToUseWhenRecording={`audio/webm`}
+                />
             </div>
         </div>
     );
