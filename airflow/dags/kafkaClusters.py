@@ -56,9 +56,9 @@ trigger_pipeline = PythonOperator(
 def read_raw_data():
     print('reading raw data . . .')
     print(f'now in {os.getcwd()}')
-    raw_data = pd.read_csv(
-        '~/../fisseha_estifanos/Data-Engineering_text-to-speech_data-collection/data/raw_data.csv')
-    # raw_data = pd.read_csv('~/raw_data.csv')
+    """raw_data = pd.read_csv(
+        '~/../fisseha_estifanos/Data-Engineering_text-to-speech_data-collection/data/raw_data.csv')"""
+    raw_data = pd.read_csv('/data/raw_data.csv')
     print(raw_data.shape)
     print('reading raw data completed . . .')
 
