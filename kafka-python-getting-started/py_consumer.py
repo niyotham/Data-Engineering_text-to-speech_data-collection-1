@@ -3,7 +3,7 @@ import json
 import msgpack as pk
 
 
-topic_name = 'g1-test-topic'
+topic_name = 'g1-raw-text-data-topic-dev'
 bootstrap_server = ['localhost:9092']
 aws_instance_bootstrap_servers = ['b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092',
                                   'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092']
