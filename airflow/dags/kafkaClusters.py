@@ -30,7 +30,7 @@ etl_dag = DAG(
     'KAFKA_CLUSTERS_data_pipeline',
     default_args=default_args,
     start_date=datetime(2022, 10, 1),
-    description='A data Extraction and loading pipeline for week 6 of 10 '
+    description='An end to end data pipeline for week 7 of 10 '
     + 'academy project',
     schedule=timedelta(days=1),     # run every day
     catchup=False                   # dont perform a backfill of missing runs
