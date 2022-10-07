@@ -39,10 +39,8 @@ def get_text(request:Request):
 
 @app.post("/send")
 def send_audio(audio:models.AudioData):
-    print(audio.url)
-    print(audio.id)
-    return audio
-    pass
+    
+    producer.produce(topic='g1-audio',message=audio.json())
 
 def get_id(request):
     ip = request.client.host
