@@ -38,10 +38,10 @@ def get_text(request:Request):
     return(text)
 
 @app.post("/send")
-# def send_audio(audio_data:models.AudioData):
-def send_audio(name:str,audio:UploadFile):
-    dt=audio.filename
-    return dt,name
+def send_audio(audio:models.AudioData):
+    print(audio.url)
+    print(audio.id)
+    return audio
     pass
 
 def get_id(request):
