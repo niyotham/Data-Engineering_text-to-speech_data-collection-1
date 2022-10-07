@@ -32,13 +32,17 @@ const Home = () => {
 
     const handleAudioUpload = async (file) => {
 
-        let data = null;
+        let base64data = null;
 
         let reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = function () {
-            let base64data = reader.result;
-            console.log(base64data);
+            base64data = reader.result;
+            // console.log(base64data);
+        }
+        let data = {
+            "id":{...text}.id,
+            "base64":base64data,
         }
         await axios.post(`http://127.0.0.1:8000/send`, data)
         window.alert("Uploaded!")
