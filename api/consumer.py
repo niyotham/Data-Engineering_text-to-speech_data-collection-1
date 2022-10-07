@@ -1,3 +1,4 @@
+import json
 from kafka import KafkaConsumer
 
 def consume(topic,bootstrap_servers=[
@@ -11,7 +12,9 @@ def consume(topic,bootstrap_servers=[
                             consumer_timeout_ms=1000)
 
     for msg in consumer:
-        print (msg.value)
+        data=json.loads(msg.value.decode('utf8'))
+        
+        print(data)
 # msg is a tuple
 # (topic='g1-test-topic',
 # partition=0, 
