@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 class AudioData(BaseModel):
-    url: str
+    base64: str
     id:str
 
     class Config:
