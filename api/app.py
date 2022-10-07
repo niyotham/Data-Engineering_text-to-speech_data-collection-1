@@ -1,6 +1,6 @@
 import json
 from urllib.request import Request
-from fastapi import FastAPI, File, UploadFile,Request
+from fastapi import FastAPI, File, UploadFile,Request,File
 from fastapi.middleware.cors import CORSMiddleware
 import uuid
 # import boto3
@@ -30,7 +30,7 @@ def get_text(request:Request):
     df = pd.read_csv(path)
     text = df.sample()['headline']
     id=get_id(request)
-    text['id']=id.replace("-",'')
+    text['id']=id
     text.reset_index(drop=True,inplace=True)
 
     producer.produce(topic='g1-text',message=text.to_json())
@@ -38,8 +38,10 @@ def get_text(request:Request):
     return(text)
 
 @app.post("/send")
-def send_audio(audio_data:models.AudioData):
-    return audio_data
+# def send_audio(audio_data:models.AudioData):
+def send_audio(name:str,audio:UploadFile):
+    dt=audio.filename
+    return dt,name
     pass
 
 def get_id(request):
