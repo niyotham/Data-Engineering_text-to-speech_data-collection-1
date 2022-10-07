@@ -1,0 +1,40 @@
+https://www.youtube.com/watch?v=SQuh7CI1DV8&ab_channel=StephaneMaarek - technical
+https://www.youtube.com/watch?v=aj9CDZm0Glc&ab_channel=IBMTechnology - theory
+
+
+    --- start zookeeper
+kafka/bin/zookeeper-server-start.sh kafka/config/zookeeper.properties
+
+
+    --- start kafka
+kafka/bin/kafka-server-start.sh kafka/config/server.properties
+
+
+    --- CREATE TOPICS
+kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4
+kafka-topics.sh --create --topic test-topic --bootstrap-server b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092,b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092 --replication-factor 1 --partitions 4
+
+
+    --- CREATE CONSUMER/PRODUCER
+kafka-console-producer.sh --topic topic_name --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic voices-topic --bootstrap-server localhost:9092 --from-beginning
+
+
+    --- list topics
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+bin/kafka-topics.sh --list --bootstrap-server b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092,b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092
+
+
+    --- docker comands
+docker exec -it -u root 29103b5995b0 /bin/bash
+docker-compose stop
+echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+docker-compose up
+
+    --- bootstrap servers for AWS kakfka cluster
+b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092,b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092
+
+
+    --- AIRFLOW run on local host
+ssh -L localhost:8080:localhost:8080 fisseha_estifanos@g1.10academy.org
+
