@@ -37,7 +37,7 @@ const Home = () => {
         reader.readAsDataURL(file);
         reader.onloadend = async function () {
             base64data = reader.result;
-            console.log(base64data);
+            // console.log(base64data);
 
             let data = {
                 "id": { ...text }.id,
