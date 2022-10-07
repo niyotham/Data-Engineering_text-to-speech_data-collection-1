@@ -6,6 +6,7 @@ import uuid
 # import boto3
 import pandas as pd
 import producer
+import models
 import consumer
 import topic
 app = FastAPI()
@@ -37,8 +38,8 @@ def get_text(request:Request):
     return(text)
 
 @app.post("/send")
-def send_audio():
-
+def send_audio(audio_data:models.AudioData):
+    return audio_data
     pass
 
 def get_id(request):
