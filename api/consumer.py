@@ -1,7 +1,7 @@
 import json
 from kafka import KafkaConsumer
 
-def consume(topic,group,time_out=305000,bootstrap_servers=[
+def consume(topic, group, time_out=305000, bootstrap_servers=[
                                 'b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092',
                                 'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092'
                             ]):
