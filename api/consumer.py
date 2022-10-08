@@ -6,7 +6,7 @@ def consume(topic, group, time_out=305000, bootstrap_servers=[
                                 'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092'
                             ]):
     consumer = KafkaConsumer(topic,
-                            bootstrap_servers,
+                            bootstrap_servers=bootstrap_servers,
                             auto_offset_reset='latest',
                             enable_auto_commit=True,
                             group_id=group,
@@ -15,9 +15,10 @@ def consume(topic, group, time_out=305000, bootstrap_servers=[
     for msg in consumer:
 
         data=json.loads(msg.value.decode('utf8'))
+
         messages.append(data)
 
-    return messages
+    return json.dumps(messages)
         # print(data)
                 
         # msg is a tuple
