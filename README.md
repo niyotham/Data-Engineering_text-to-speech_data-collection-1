@@ -44,7 +44,7 @@
 
 > Python 3.5 or above
 >
-> Docker
+> Docker and Docker compose
 > 
 > Pip
 >
