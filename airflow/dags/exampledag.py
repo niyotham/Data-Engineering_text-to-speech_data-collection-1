@@ -5,10 +5,10 @@ from airflow.operators.python import PythonOperator
 
 # print("this is a check for airflow")
 with DAG(
-    dag_id='example_dag',
-    description="Example Dag",
-    start_date=datetime(2022, 10, 4, 10),
-    schedule_interval='@daily'
+    dag_id ='FirstDag',
+    description = "First Dag",
+    start_date = datetime(2022,10,4,10),
+    schedule_interval = '@daily'
 ) as dag:
     # A task bash operator = runs bash command, python operator = runs python
     # code

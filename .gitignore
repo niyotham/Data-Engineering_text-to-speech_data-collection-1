@@ -51,6 +51,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# junk files
+junk/
+
 # Translations
 *.mo
 *.pot
@@ -134,3 +137,5 @@ dmypy.json
 # Api related keys
 api-key-QLASU6OSTPSUQ5JF_fish.txt
 getting_started.ini
+.DS_Store
+node_modules/
