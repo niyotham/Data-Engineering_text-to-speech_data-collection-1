@@ -11,12 +11,14 @@ def consume(topic, group, time_out=305000, bootstrap_servers=[
                             enable_auto_commit=True,
                             group_id=group,
                             consumer_timeout_ms=time_out)
-
+    messages=[]
     for msg in consumer:
 
         data=json.loads(msg.value.decode('utf8'))
-        
-        print(data)
+        messages.append(data)
+
+    return messages
+        # print(data)
                 
         # msg is a tuple
         # (topic='g1-test-topic',
