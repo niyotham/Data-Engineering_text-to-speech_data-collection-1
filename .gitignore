@@ -53,7 +53,7 @@ coverage.xml
 
 # junk files
 junk/
-
+.vscode/
 # Translations
 *.mo
 *.pot
