@@ -26,13 +26,13 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 bin/kafka-topics.sh --list --bootstrap-server b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092,b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092
 
 
-    --- docker comands
+    --- docker commands
 sudo docker exec -it -u root 3a433dfab66f /bin/bash
 sudo docker-compose stop
 echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
 docker-compose up
 
-    --- bootstrap servers for AWS kakfka cluster
+    --- bootstrap servers for AWS kafka cluster
 b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092,b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092
 
 
