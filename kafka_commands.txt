@@ -15,6 +15,10 @@ kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --
 
 kafka-topics.sh --create --topic g1-raw-text-data-topic-dev --bootstrap-server b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092,b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092 --replication-factor 1 --partitions 4
 
+    --- DELETE TOPICS
+Ensure that the Kafka brokers allow for topic deletion delete.topic.enable=true (default)
+kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic first_topic
+
 
     --- CREATE CONSUMER/PRODUCER
 kafka-console-producer.sh --topic topic_name --bootstrap-server localhost:9092
