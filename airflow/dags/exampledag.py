@@ -6,8 +6,8 @@ from airflow.operators.python import PythonOperator
 
 #print("this is a check for airflow")
 with DAG(
-    dag_id ='example_dag',
-    description = "Example Dag",
+    dag_id ='FirstDag',
+    description = "First Dag",
     start_date = datetime(2022,10,4,10),
     schedule_interval = '@daily'
 ) as dag:
