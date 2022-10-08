@@ -9,6 +9,7 @@ import pandas as pd
 import json
 from kafka import KafkaProducer, KafkaConsumer
 from kafka.errors import KafkaError
+import boto3
 # from airflow.providers.postgres.operators.postgres import PostgresOperator
 # import defaults as defs
 
@@ -32,7 +33,7 @@ aws_instance_bootstrap_servers = ['b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazo
                                   'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092']
 
 # raw data topic
-RAW_DATA_TOPIC = 'g1-raw-text-data-topic-dev'
+RAW_DATA_TOPIC = 'g1-raw-text-data-topic'
 
 # define the DAG
 etl_dag = DAG(
@@ -48,7 +49,7 @@ etl_dag = DAG(
 # region trigger task
 
 def receive_trigger():
-    print('trigger received')
+    print('full data pipeline trigger received')
 
 
 trigger_pipeline = PythonOperator(
@@ -64,6 +65,7 @@ trigger_pipeline = PythonOperator(
 
 def read_raw_data(ti):
     print('reading raw data . . .')
+
     print(f'now in {os.getcwd()}')
     raw_data = pd.read_csv('./data/raw_data.csv')
     print(f'shape of the data: {raw_data.shape}')
@@ -76,6 +78,7 @@ def read_raw_data(ti):
     print(f'raw_data_json_parsed: {raw_data_json_parsed}\n' +
           f'type: {type(raw_data_json_parsed)}')
     print(json.dumps(raw_data_json_parsed, indent=4))
+
     print('reading raw data completed . . .')
 
 
@@ -88,16 +91,37 @@ raw_data_read = PythonOperator(
 # endregion
 
 
-# region put raw data into a data lake
-# TODO:
-def put_raw_data_to_data_lake():
-    print('putting raw data to data lake . . .')
-    print('putting raw data to data lake completed. . .')
+# region put raw data into a S3 bucket
+def put_raw_data_to_S3(ti):
+    print('putting raw data to S3 bucket . . .')
+
+    raw_data = ti.xcom_pull(key='raw_data_from_csv', task_ids='raw_data_read')
+    print(f'raw data: {raw_data}\ntype of the data: {type(raw_data)}')
+    print('raw message received from previous task. . .')
+
+    df_raw_data = pd.DataFrame(pd.Series(raw_data))
+    print('raw message converted to a data frame . . .')
+
+    real_S3bucket = "/mnt/10ac-batch-6/notebooks/g1-dlk"
+    S3bucket = "./s3bucket/"
+    file_name = datetime.now().strftime("%Y%m%d-%H%M%S") + ".csv"
+    print('putting raw data to S3 bucket . . .')
+    df_raw_data.to_csv(S3bucket + file_name, index=False)
+
+    """s3 = boto3.client("s3")
+
+    # format name with current timestamp
+    json_file_name = datetime.now().strftime("%Y%m%d-%H%M%S") + ".json"
+    s3object = s3.Object(S3bucket, json_file_name)
+
+    s3object.put(Body=(bytes(json.dumps(raw_data).encode("UTF-8"))))"""
+
+    print('putting raw data to S3 bucket completed. . .')
 
 
-raw_data_to_data_lake = PythonOperator(
-    task_id='raw_data_to_data_lake',
-    python_callable=put_raw_data_to_data_lake,
+raw_data_to_S3 = PythonOperator(
+    task_id='raw_data_to_S3',
+    python_callable=put_raw_data_to_S3,
     dag=etl_dag
 )
 
@@ -108,33 +132,56 @@ raw_data_to_data_lake = PythonOperator(
 
 def produce_the_message(ti):
     print('publishing raw message . . .')
+
     raw_data = ti.xcom_pull(key='raw_data_from_csv', task_ids='raw_data_read')
+    print('raw message received from previous task. . .')
     print(f'raw data: {raw_data}\ntype of the data: {type(raw_data)}')
-    json_encoded_data = json.dumps(raw_data, indent=4, ensure_ascii=False)
-    print(f'json encoded data: {json_encoded_data}\ntype of the data: {type(json_encoded_data)}')
-    print('raw message received . . .')
+
+    df_raw_data = pd.DataFrame(pd.Series(raw_data))
+    print('raw message converted to a data frame . . .')
+    print(
+        f'data frame raw data: {df_raw_data}\ntype of the data: {type(df_raw_data)}')
+    # json_encoded_data = json.dumps(raw_data, indent=4, ensure_ascii=False)
+    # print(f'json encoded data: {json_encoded_data}\ntype of the data: {type(json_encoded_data)}')
+
+    print(f"extracted data: {df_raw_data.loc[['data']]}\nlength: {len(df_raw_data.loc[['data']])}\ntype: {type(df_raw_data.loc[['data']])}\ncols: {df_raw_data.loc[['data']].columns.values}\nshape: {df_raw_data.loc[['data']].shape}")
+    print(f"df info: {df_raw_data.loc[['data']].info()}")
+    print(
+        f"series details: {df_raw_data.loc['data']}\ntype: {type(df_raw_data.loc['data'])}\nlen: {len(df_raw_data.loc['data'])}")
+    print(
+        f"series data details: {df_raw_data.loc['data'][0]}\ntype: {type(df_raw_data.loc['data'][0])}\nlen: {len(df_raw_data.loc['data'][0])}")
+    for i in range(0, len(df_raw_data.loc['data'][0])):
+        print(f"type: {type(df_raw_data.loc['data'][0][i])}")
+        print(f"full data: {df_raw_data.loc['data'][0][i]}")
+        print(f"headline: {df_raw_data.loc['data'][0][i]['headline']}")
+        print(f"category: {df_raw_data.loc['data'][0][i]['category']}")
+        print(f"date: {df_raw_data.loc['data'][0][i]['date']}")
+        print(f"views: {df_raw_data.loc['data'][0][i]['views']}")
+        print(f"article: {df_raw_data.loc['data'][0][i]['article']}")
+        print(f"link: {df_raw_data.loc['data'][0][i]['link']}")
 
     print(f'publishing raw messages to the {RAW_DATA_TOPIC} topic . . .')
     producer = KafkaProducer(bootstrap_servers=aws_instance_bootstrap_servers)
     # producer = KafkaProducer(
     #   value_serializer=lambda v: json.dumps(v).encode("utf-8"))
     # producer.send(RAW_DATA_TOPIC, {"text": raw_data['article'][0]})
-    byte_encoded_data = bytes(f"{json_encoded_data}", encoding='utf-8')
-    future = producer.send(RAW_DATA_TOPIC, byte_encoded_data)
-    producer.flush()
-    try:
-        record_metadata = future.get(timeout=10)
-    except KafkaError:
-        # Decide what to do if produce request failed...
-        log.exception()
-        pass
-
+    for i in range(0, len(df_raw_data.loc['data'][0])):
+        byte_encoded_data = bytes(f"{df_raw_data.loc['data'][0][i]['article']}",
+                                  encoding='utf-8')
+        future = producer.send(RAW_DATA_TOPIC, byte_encoded_data)
+        producer.flush()
+        try:
+            record_metadata = future.get(timeout=10)
+        except KafkaError:
+            # Decide what to do if produce request failed...
+            log.exception()
+            pass
         # Successful result returns assigned partition and offset
-    print(f"topic: {record_metadata.topic}")
-    print(f"value: {record_metadata}")
-    print(f"partition: {record_metadata.partition}")
-    print(f"offset: {record_metadata.offset}")
-    print('publishing raw messages completed. . .')
+        print(f"topic: {record_metadata.topic}")
+        print(f"value: {record_metadata}")
+        print(f"partition: {record_metadata.partition}")
+        print(f"offset: {record_metadata.offset}")
+        print('publishing raw messages completed. . .')
 
 
 produce_message = PythonOperator(
@@ -152,10 +199,10 @@ def consume_the_message():
     print('consuming raw messages . . .')
     # To consume latest messages and auto-commit offsets
     consumer = KafkaConsumer(RAW_DATA_TOPIC,
-                             # group_id='my-group',
+                             # group_id='base-development-group',
                              bootstrap_servers=aws_instance_bootstrap_servers,
                              auto_offset_reset='earliest',
-                             enable_auto_commit=False,
+                             enable_auto_commit=True,
                              # StopIteration if no message after 1sec
                              consumer_timeout_ms=1000)
 
@@ -165,8 +212,9 @@ def consume_the_message():
         print(f"partition: {msg.partition}")
         print(f"offset: {msg.offset}")
         print(f"value: {msg.value}")
-        data = json.loads(msg.value.decode('utf8'))
-        print(f"consumed data: {data}")
+        # decoded_data = json.dumps(msg, indent=4, ensure_ascii=False)
+        decoded_data = msg.value.decode("utf-8")
+        print(f"decoded data: {decoded_data}\ntype: {type(decoded_data)}")
     print('consuming raw messages completed . . .')
 
 
@@ -223,4 +271,4 @@ load_message_to_DWH = PythonOperator(
 
 # endregion
 
-trigger_pipeline >> raw_data_read >> raw_data_to_data_lake >> produce_message >> consume_message >> transform_message >> add_metadata >> load_message_to_DWH
+trigger_pipeline >> raw_data_read >> raw_data_to_S3 >> produce_message >> consume_message >> transform_message >> add_metadata >> load_message_to_DWH
