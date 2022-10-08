@@ -44,6 +44,8 @@
 
 > Python 3.5 or above
 >
+> Docker
+> 
 > Pip
 >
 > kafka-python
