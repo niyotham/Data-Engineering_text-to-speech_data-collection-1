@@ -1,7 +1,7 @@
 import json
 from kafka import KafkaConsumer
 
-def consume(topic,bootstrap_servers=[
+def consume(topic,group,bootstrap_servers=[
                                 'b-1.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092',
                                 'b-2.batch6w7.6qsgnf.c19.kafka.us-east-1.amazonaws.com:9092'
                             ]):
@@ -9,6 +9,7 @@ def consume(topic,bootstrap_servers=[
                             bootstrap_servers,
                             auto_offset_reset='earliest',
                             enable_auto_commit=False,
+                            group_id=group,
                             consumer_timeout_ms=1000)
 
     for msg in consumer:
