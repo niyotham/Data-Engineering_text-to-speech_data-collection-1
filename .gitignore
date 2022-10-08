@@ -132,7 +132,7 @@ dmypy.json
 .pyre/
 
 # kafka related commands
-kafka_commands.txt
+#kafka_commands.txt
 
 # Api related keys
 api-key-QLASU6OSTPSUQ5JF_fish.txt
