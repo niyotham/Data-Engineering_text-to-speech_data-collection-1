@@ -81,8 +81,8 @@
 > Python 3.5 or above
 
 > Docker and Docker compose
->
-> You can find the full list of requirements in the requirements.txt file
+
+You can find the full list of requirements in the requirements.txt file
 
 ## Install
 
