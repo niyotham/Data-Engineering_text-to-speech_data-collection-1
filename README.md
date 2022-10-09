@@ -33,13 +33,13 @@
 
 > Our client [10 Academy](https://www.10academy.org/), recognizing the value of large data sets for speech-t0-text data sets and seeing the opportunity that there are many text corpora for Amharic and Swahili languages, and understanding that complex data engineering skills are valuable to our profile for employers, want to have a design and build a robust, large scale, fault-tolerant, highly available Kafka cluster that can be used to post a sentence and receive an audio file.
 >
-> Producing a tool that can be deployed to process posting and receiving text and audio files from and into a Kafka topic, apply transformation in a distributed manner, and load it into a data warehouse in a suitable format to train a speech-to-text model would do the required job.
+> Producing a tool that can be deployed to process posting and receiving text and audio files from and into a Kafka topic, apply transformation in a distributed manner, and load it into an S3 bucket in a suitable format to train a speech-to-text model would do the required job.
 
 ## Objective
 
 > The main objective of this week’s project is to build a data engineering pipeline that allows recording millions of Amharic and Swahili speakers reading digital texts in-app and on web platforms
 >
-> This can be achieved by building an end-to-end ETL data pipeline that will use Apache Kafka, Apache Spark, and Apache Airflow in order to receive user voice audio files, transform them and load them to a data warehouse that will later be used for text-to-speech conversion machine learning project.
+> This can be achieved by building an end-to-end ETL data pipeline that will use Apache Kafka, Apache Spark, and Apache Airflow in order to receive user voice audio files, transform them and load them to an S3 bucket that will later be used for text-to-speech conversion machine learning project.
 >
 > Users will be prompted with several different sentences and they will provide their corresponding audio by recording using the front-end user interface that is provided.
 
@@ -135,7 +135,7 @@ uvicorn app:app --reload
 
 ## Scripts
 
-> All the scripts and modules used for this project relating to interactions with the kafka, airflow, spark and data warehouse frameworks along with default parameters and values used will be found here, in the scripts folder.
+> All the scripts and modules used for this project relating to interactions with the kafka, airflow, spark and other frameworks along with default parameters and values used will be found here, in the scripts folder.
 
 ## Tests
 
