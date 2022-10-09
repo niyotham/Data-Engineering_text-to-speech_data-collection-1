@@ -179,7 +179,7 @@ uvicorn app:app --reload
 
 > 👤 **Niyomukiza Thamar**
 >
-> - [Email](mailto:thamarniyo@gmail.com), [GitHub](https://github.com/niyotham), [LinkedIn](insert link here)
+> - [Email](mailto:thamarniyo@gmail.com), [GitHub](https://github.com/niyotham), [LinkedIn](https://www.linkedin.com/in/thamar-niyomukiza-230959125/)
 
 ## Show us your support
 
