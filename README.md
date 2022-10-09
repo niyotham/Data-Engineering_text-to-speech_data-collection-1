@@ -122,7 +122,8 @@ uvicorn app:app --reload
 
 - After running the front end, one can simply go over to the browser and type in [http://localhost:3000](http://localhost:3000). or click this link
 - A page similar to this will appear.
-![](screenshots/Home_Page.png)
+
+![](screenshots/homepage.jpg)
 
 - Users will then click on the get text button to get a text.
 - Users will record themselves speaking the generated text out loud by using the recording interface provided.
