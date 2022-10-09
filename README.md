@@ -11,6 +11,7 @@
 - [Introduction](#introduction)
 - [Overview](#overview)
 - [Objective](#objective)
+- [Data](#data)
 - [Requirements](#requirements)
 - [Install](#install)
 - [How to use](#examples)
@@ -40,12 +41,28 @@
 >
 > Users will be prompted with several different sentences and they will provide their corresponding audio by recording using the front-end user interface that is provided.
 
+## Data
+
+> The main data for this task is a text corpus of which the context was a news data context. The data was comprised of mostly news sentences that were written in the Amharic language.
+
+> This data is publicly available and can be found [here](https://github.com/IsraelAbebe/An-Amharic-News-Text-classification-Dataset). as a CSV file.
+> You can also read a brief description of the data [here](https://arxiv.org/pdf/2103.05639.pdf).
+
+> It was initially containing slightly over 51, 400 records. The data also has 6 features. These features were:
+
+- Headline: The headline of the news
+- Category: The category of the news
+- Date: The date the news was aired
+- Views: Total number of views of the news
+- Article: The main body of the news
+- Link: The link where the news was found
+
 ## Requirements
 
 > Python 3.5 or above
 >
 > Docker and Docker compose
-> 
+>
 > Pip
 >
 > kafka-python
@@ -57,6 +74,10 @@
 > Apache kafka
 >
 > Apache Spark
+>
+> Flask
+>
+> React (nodejs)
 
 ## Install
 
