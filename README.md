@@ -48,6 +48,7 @@
 > The main data for this task is a text corpus of which the context was a news data context. The data was comprised of mostly news sentences that were written in the Amharic language.
 
 > This data is publicly available and can be found [here](https://github.com/IsraelAbebe/An-Amharic-News-Text-classification-Dataset). as a CSV file.
+>
 > You can also read a brief description of the data [here](https://arxiv.org/pdf/2103.05639.pdf).
 
 > It was initially containing slightly over 51, 400 records. The data also has 6 features. These features were:
@@ -62,14 +63,23 @@
 ## Requirements
 
 > Pip
+
 > FastApi
+
 > Zookeeper
+
 > kafka-python
+
 > Apache kafka
+
 > Apache Spark
+
 > React (nodejs)
+
 > Apache airflow
+
 > Python 3.5 or above
+
 > Docker and Docker compose
 >
 > You can find the full list of requirements in the requirements.txt file
