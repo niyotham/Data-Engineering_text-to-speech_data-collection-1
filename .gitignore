@@ -36,6 +36,7 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+logs/
 
 # Unit test / coverage reports
 htmlcov/
@@ -53,7 +54,7 @@ coverage.xml
 
 # junk files
 junk/
-
+.vscode/
 # Translations
 *.mo
 *.pot
@@ -132,7 +133,7 @@ dmypy.json
 .pyre/
 
 # kafka related commands
-kafka_commands.txt
+#kafka_commands.txt
 
 # Api related keys
 api-key-QLASU6OSTPSUQ5JF_fish.txt
