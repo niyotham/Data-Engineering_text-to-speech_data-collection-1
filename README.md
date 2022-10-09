@@ -149,7 +149,7 @@ uvicorn app:app --reload
 
 > 👤 **Ekubazgi Gebremariam**
 >
-> - [Email](mailto:axutec14@gmail.com), [GitHub](https://github.com/ekubay), [LinkedIn](inset link here)
+> - [Email](mailto:axutec14@gmail.com), [GitHub](https://github.com/ekubay), [LinkedIn](https://www.linkedin.com/in/ekubazgi-g-mariam-61507270)
 
 > 👤 **Emtinan Salaheldin**
 >
