@@ -1,5 +1,5 @@
-import pandas as pd
 import json
+import pandas as pd
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
